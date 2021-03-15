@@ -1,21 +1,21 @@
 #include "Point.h"
-Point::Point(int a, int b): x(a),y(b)
+Point::Point(double a, double b): x(a),y(b)
 {
 	
 }
-void Point::setX(int a)
+void Point::setX(double a)
 {
 	x = a;
 }
-void Point::setY(int a)
+void Point::setY(double a)
 {
 	y = a;
 }
-int Point::getX()
+double Point::getX()
 {
 	return x;
 }
-int Point::getY()
+double Point::getY()
 {
 	return y;
 }

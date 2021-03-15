@@ -2,11 +2,20 @@
 //
 
 #include <iostream>
+#include <fstream>
+
 #include "Point.h"
 #include "SquareTriangle.h"
 int main()
 {
-    std::cout << "Hello World!\n";
+    auto s = SquareTriangle(*(new Point(3, 3)), *(new Point(3, 0)), *(new Point(-1, 0)));
+    s.turn();
+    std::ofstream gnuplot;
+    gnuplot.open("gnuplot.dat");
+    gnuplot << s.getA().getX() << " " << s.getA().getY() << "\n";
+    gnuplot << s.getB().getX() << " " << s.getB().getY() << "\n";
+    gnuplot << s.getC().getX() << " " << s.getC().getY() << "\n";
+    gnuplot << s.getA().getX() << " " << s.getA().getY() << "\n";
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
