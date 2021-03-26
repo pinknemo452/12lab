@@ -11,8 +11,17 @@ public:
 	Point getA();
 	Point getB();
 	Point getC();
+
+	double getArea();
+
+	double getPerimeter();
+
+	double getAngles();
+	
 private:
 	Point a,b,c;
+	double ab, ac, bc;
+	int maxside;
 };
 #endif
 
